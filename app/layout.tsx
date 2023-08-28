@@ -1,21 +1,22 @@
-import { Inter, IBM_Plex_Mono } from 'next/font/google'
+import { Montserrat, Bree_Serif } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
 
-const inter = Inter({
-  variable: '--font-inter',
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
   subsets: ['latin'],
+  weight: ['400', '500', '700'],
 })
 
-const plexMono = IBM_Plex_Mono({
-  variable: '--font-plex-mono',
+const breeSerif = Bree_Serif({
+  weight: '400',
   subsets: ['latin'],
-  weight: ['400', '500'],
+  variable: '--font-bree-serif'
 })
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
+    <html lang="pt-BR" className={`${montserrat.variable} ${breeSerif.variable}`}>
       <body>
         {children}
       </body>
